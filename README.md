@@ -23,26 +23,22 @@ Desenvolver uma aplicação com arquitetura de **microserviços** para gerenciam
 
 # Funcionalidades Requeridas
  - Microserviço 1 (Gestão de Estoque): 
-
- - Cadastro de Produtos: Adicionar novos produtos com nome, descrição, preço e quantidade em estoque. 
-
- - Consulta de Produtos: Permitir que o usuário consulte o catálogo de produtos e a quantidade disponível em estoque. 
-
- - Atualização de Estoque: O estoque deve ser atualizado quando ocorrer uma venda (integração com o Microserviço de Vendas). 
+   - Cadastro de Produtos: Adicionar novos produtos com nome, descrição, preço e quantidade em estoque. 
+   - Consulta de Produtos: Permitir que o usuário consulte o catálogo de produtos e a quantidade disponível em estoque. 
+   - Atualização de Estoque: O estoque deve ser atualizado quando ocorrer uma venda (integração com o Microserviço de Vendas). 
 
  - Microserviço 2 (Gestão de Vendas): 
+   - Criação de Pedidos: Permitir que o cliente faça um pedido de venda, com a validação do estoque antes de confirmar a compra. 
 
- - Criação de Pedidos: Permitir que o cliente faça um pedido de venda, com a validação do estoque antes de confirmar a compra. 
+   - Consulta de Pedidos: Permitir que o usuário consulte o status dos pedidos realizados. 
 
- - Consulta de Pedidos: Permitir que o usuário consulte o status dos pedidos realizados. 
-
- - Notificação de Venda: Quando um pedido for confirmado, o serviço de vendas deve notificar o serviço de estoque sobre a redução do estoque. 
+   - Notificação de Venda: Quando um pedido for confirmado, o serviço de vendas deve notificar o serviço de estoque sobre a redução do estoque. 
 
  - Comum aos dois microserviços: 
 
- - Autenticação via JWT: Apenas usuários autenticados podem interagir com os sistemas de vendas ou consultar o estoque. 
+   - Autenticação via JWT: Apenas usuários autenticados podem interagir com os sistemas de vendas ou consultar o estoque. 
 
- - API Gateway: Usar um gateway para centralizar o acesso à API, garantindo que as requisições sejam direcionadas ao microserviço correto
+   - API Gateway: Usar um gateway para centralizar o acesso à API, garantindo que as requisições sejam direcionadas ao microserviço correto
 
 # Contexto do Negócio
 A aplicação simula um sistema para uma plataforma de e-commerce, onde empresas precisam gerenciar seu estoque de produtos e realizar vendas de forma eficiente. A solução deve ser escalável e robusta, com separação clara entre as responsabilidades de estoque e vendas, utilizando boas práticas de arquitetura de microserviços. Esse tipo de sistema é comum em empresas que buscam flexibilidade e alta disponibilidade em ambientes com grande volume de transações. 
